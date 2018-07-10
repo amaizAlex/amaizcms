@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="67px" viewBox="0 0 71 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Pin_1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M29.5,84 C49.1666667,58.5186586 59,40.3488971 59,29.4907155 C59,13.2034431 45.7924001,0 29.5,0 C13.2075999,0 0,13.2034431 0,29.4907155 C0,40.3488971 9.83333333,58.5186586 29.5,84 Z" id="path-1"></path>
+        <filter x="-11.9%" y="-8.3%" width="137.3%" height="126.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="4" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.188349185 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="second-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="contacts_desktop" transform="translate(-273.000000, -427.000000)">
+            <g id="Pin_1" transform="translate(275.000000, 429.000000)">
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#2C3846" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <path d="M42.5,30.0995352 L42.5,43.8666667 L39.9741707,43.8666667 L39.9741707,38.6572236 C37.6865868,41.6398728 34.0786714,43.564086 30.0195788,43.564086 C23.1052063,43.564086 17.5,37.9806596 17.5,31.0931541 C17.5,24.2056486 23.1052063,18.6222222 30.0195788,18.6222222 C36.5982021,18.6222222 41.9917138,23.676572 42.5,30.0995352 Z M30.0547229,41.0025635 C35.5300064,41.0025635 39.9686007,36.5812161 39.9686007,31.1272077 C39.9686007,25.6731992 35.5300064,21.2518519 30.0547229,21.2518519 C24.5794394,21.2518519 20.1408451,25.6731992 20.1408451,31.1272077 C20.1408451,36.5812161 24.5794394,41.0025635 30.0547229,41.0025635 Z" id="Combined-Shape-Copy-14" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <ellipse id="Oval-3" fill="#00A1E6" cx="30" cy="31.2444444" rx="7.8125" ry="7.88888889"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

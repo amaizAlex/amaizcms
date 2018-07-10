@@ -1,0 +1,44 @@
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title> {{ .Params.seo.title }} </title>
+	<meta name="description" content="{{ .Params.seo.description }}" />
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+	<link rel="manifest" href="/img/favicon/manifest.json" />
+	<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#00a1e6" />
+	<meta name="theme-color" content="#ffffff" />
+
+	<!-- social -->
+	<meta property="og:image" content="{{ .Params.SEO.socialImg }}" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="800" />
+	<meta property="og:image:type" content="image/jpg" />
+	<meta property="og:url" content="{{ .Site.BaseURL }}{{ .Page.URL }}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{{ .Params.seo.title }}" />
+	<meta property="og:description" content="{{ .Params.seo.description }}" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:site_name" content="Amaiz Software" />
+	<meta property="fb:app_id" content="377013906114593" />
+	<meta name="twitter:site" content="@AmaizFinance" />
+	<meta name="twitter:card" content="summary_large_image" />
+	
+	<!-- alternate/hreflang -->
+	<link rel="alternate" hreflang="en" href="{{ .Site.BaseURL }}{{ .Page.URL }}" />
+
+	<!--  Canonical URL -->
+	<link rel="canonical" href="{{ .Site.BaseURL }}{{ .Page.URL }}" />
+
+
+	<!-- Google tag manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TP3MVGT');</script>
+
+	
+	<link rel="stylesheet" href="/css/main.css"/>
+	
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>

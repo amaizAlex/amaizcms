@@ -1,0 +1,87 @@
+.page_careers {
+
+	.intro-img {
+		.retina('/img/gallery/careers1.jpg', 2, cover, no-repeat center center @dark);
+		background-size: cover;
+	}
+
+	.content {
+
+		.quote {
+			margin-bottom: 24px;
+		}
+
+		.vacancies {
+			margin: 16px 0 24px;
+
+			.vacancy {
+				display: block;
+				width: 100%;
+				padding: 10px 8px;
+				cursor: pointer;
+				color: @dark;
+				text-decoration: none;
+				font-size: 12px;
+
+				&:nth-child(odd) {
+					background: @lightBlue;
+				}
+
+				&:hover {
+					background: @azure;
+					color: @white;
+				}
+
+				.vacancy_title {
+					font-family: "Helvetica Neue", Helvetica, sans-serif;
+					font-weight: 600;
+					display: block;
+					margin-bottom: 4px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (min-height: 600px) {
+	.page_careers {
+		.content {
+
+			.quote {
+				margin-bottom: 75px;
+			}
+
+			.vacancies {
+				.vacancy {
+					padding: 16px;
+					font-size: 16px;   
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) and (min-height: 600px) {
+	.page_careers {
+
+		.fixed {
+
+			.fixed_bg1 {
+				.retina('/img/gallery/careers1.jpg', 2, cover, no-repeat center center @dark);
+				z-index: 10;
+			}
+
+			.fixed_bg2 {
+				display: block;
+				.retina('/img/gallery/careers2.jpg', 2, cover, no-repeat 40% center @dark);
+				z-index: 9;
+			}
+
+			.fixed_bg3 {
+				display: block;
+				.retina('/img/gallery/careers3.jpg', 2, cover, no-repeat center center @dark);
+				z-index: 8;
+			}
+		}
+	}
+}

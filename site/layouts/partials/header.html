@@ -1,0 +1,20 @@
+<div class="header">
+	<a class="logo" href="/">
+		{{ partial "svg/logo" . }}
+	</a>
+	<div class="btn-nav">
+		<div class="btn-nav-box">
+			<div class="btn-nav-inner"></div>
+		</div>
+	</div>
+	<nav class="nav">
+		<ul>
+			<!-- {{ $currentPage := . }} -->
+		    {{ range .Site.Menus.main }}
+		    <li class="li">
+		    	<a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+		    </li>
+		    {{ end }}
+		</ul>
+	</nav>
+</div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="page_404" lang="en">
+  {{ partial "head" . }}
+  <body id="transition-disabled">
+  {{ partial "header" . }}
+    <div class="fixed">
+      <div class="fixed_bg fixed_bg1"></div>
+    </div>
+    <div class="intro-img"></div>
+    <ul class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/" itemprop="item">Amaiz</a>
+        <meta itemprop="position" content="1">
+      </li><span class="breadcrumbs_separator"></span>
+      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span itemprop="item">404</span>
+        <meta itemprop="position" content="2">
+      </li>
+    </ul>
+    <div class="content">
+      <h1>404 error</h1><span class="h3">Sorry, the page not found.</span>
+      <p>Seems like you missed it.<br/>But no worries, we got your back.</p><a class="btn-blue" href="/">Go back to home page</a>
+    </div>
+    {{ partial "footer" . }}
+    <script defer src="/js/jquery.js"></script>
+    <script defer src="/js/main.js"></script>
+  </body>
+</html>

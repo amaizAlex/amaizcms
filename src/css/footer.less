@@ -1,0 +1,110 @@
+.footer {
+	background: @black;
+	position: relative;
+
+	&_inner {
+		position: relative;
+		padding: 24px 24px 0;
+		max-width: 568px;
+		margin: 0 auto;
+
+		&.logo-light {
+			display: block;
+			height: 18px;
+		}
+
+		&_social {
+			position: absolute;
+			top: 24px;
+			right: 24px;
+
+			a {
+				text-decoration: none;
+			}
+			
+			svg {
+				height: 18px;
+				width: 18px;
+				margin-left: 7px;
+
+				path {			
+					transition: fill .3s;
+				}
+
+				&:hover {
+					path {
+						fill: @azure;
+					}
+				}
+			}
+		}
+
+		&_nav {
+			list-style: none;
+			margin: 40px 0 32px;
+
+			li {
+				margin-bottom: 12px;
+				
+				a {
+					color: @white;
+					text-decoration: none;
+				}
+			}
+		}
+
+		p {
+			color: @gray;
+			font-size: 12px;
+			padding-bottom: 24px;
+		}
+	}
+}
+
+
+@media (min-width: 1024px) and (min-height: 600px) {
+	.footer {
+		width: 65%;
+		left: 35%;
+
+		&_inner {
+			padding: 40px 52px 0;
+			max-width: none;
+
+			.logo-light {
+				display: none;
+			}
+
+			&_social {
+				width: 28px;
+				right: 52px;
+				top: 40px;
+				
+				svg {
+					width: 28px;
+					height: 28px;
+					margin-left: 0;
+					margin-bottom: 4px;
+				}
+			}
+			&_nav {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 1280px) and (min-height: 800px) {
+	.footer {
+		padding: 40px 160px 0;
+
+		&_inner {
+			padding: 0;
+
+			&_social {
+				right: 0px;
+				top:0;
+			}
+		}
+	}
+}

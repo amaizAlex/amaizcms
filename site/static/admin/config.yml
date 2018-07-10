@@ -1,0 +1,163 @@
+backend:
+  name: git-gateway
+
+media_folder: "site/static/img"
+public_folder: "img"
+
+# publish_mode: editorial_workflow
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "pages"
+    label: "Pages"
+    files:
+
+      - name: "home"
+        label: "Home Page"
+        file: "site/content/_index.md"
+        fields:
+          - {label: "System Class for layout", name: "pageclass", widget: "hidden", default: "page_home"}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string", default: "Amaiz Software"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Social Image", name: "socialImg", widget: "image"}
+          - {label: "Title", name: "title", widget: "string"}
+          - label: "Section1"
+            name: "section1"
+            widget: "object"
+            fields:
+              - {label: "H1", name: "h1", widget: "string"}
+              - {label: "H3", name: "h3", widget: "string"}
+              - {label: "BTN", name: "btntext", widget: "string"}
+          - label: "Section2"
+            name: "section2"
+            widget: "object"
+            fields:
+              - {label: "H2 Mobile", name: "h2mobile", widget: "string"}
+              - {label: "H2", name: "h2", widget: "string"}
+              - {label: "H3", name: "h3", widget: "string"}
+              - {label: "Paragraph", name: "p", widget: "text"}
+              - {label: "list", name: "list", widget: "list", field: {label: "Item", name: "item", widget: "string"}}
+          - label: "Section3"
+            name: "section3"
+            widget: "object"
+            fields:
+              - {label: "H2 Mobile", name: "h2mobile", widget: "string"}
+              - {label: "H2", name: "h2", widget: "string"}
+              - {label: "H3", name: "h3", widget: "string"}
+              - {label: "Paragraph", name: "p", widget: "text"}
+              - {label: "list", name: "list", widget: "list", field: {label: "Item", name: "item", widget: "string"}}
+          - label: "Section4"
+            name: "section4"
+            widget: "object"
+            fields:
+              - {label: "H2 Mobile", name: "h2mobile", widget: "string"}
+              - {label: "H2", name: "h2", widget: "string"}
+              - {label: "H3", name: "h3", widget: "string"}
+              - {label: "Paragraph", name: "p", widget: "text"}
+              - {label: "list", name: "list", widget: "list", field: {label: "Item", name: "item", widget: "string"}}
+          - label: "Section5"
+            name: "section5"
+            widget: "object"
+            fields:
+              - {label: "H2 Mobile", name: "h2mobile", widget: "string"}
+              - {label: "H2", name: "h2", widget: "string"}
+              - {label: "H3", name: "h3", widget: "string"}
+              - {label: "Paragraph", name: "p", widget: "text"}
+              - label: "Quote"
+                name: "quote"
+                widget: "object"
+                fields:
+                  - {label: "Author Avatar", name: "avatar", widget: "image", media_folder: "build/img/leaders" }
+                  - {label: "Author Avatar@2x", name: "avatar2", widget: "image"}
+                  - {label: "Author Avatar@3x", name: "avatar3", widget: "image"}
+                  - {label: "Author Name", name: "name", widget: "string"}
+                  - {label: "Author Position", name: "position", widget: "string"}
+                  - {label: "Quote Text", name: "text", widget: "string"}
+
+      - name: "about"
+        label: "About Page"
+        file: "site/content/about/_index.md"
+        fields:
+          - {label: "System Class for layout", name: "pageclass", widget: "hidden", default: "page_contacts"}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string", default: "Amaiz Software"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Social Image", name: "socialImg", widget: "image"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown", required: false }
+
+      - name: "contacts"
+        label: "Contacts Page"
+        file: "site/content/contacts/_index.md"
+        fields:
+          - {label: "System Class for layout", name: "pageclass", widget: "hidden", default: "page_contacts"}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string", default: "Amaiz Software"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Social Image", name: "socialImg", widget: "image"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown", required: false }
+
+      - name: "careers"
+        label: "Careers Page"
+        file: "site/content/careers/_index.md"
+        fields:
+          - {label: "System Class for layout", name: "pageclass", widget: "hidden", default: "page_careers"}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string", default: "Amaiz Software"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Social Image", name: "socialImg", widget: "image"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown", required: false }
+
+      - name: "privacy-policy"
+        label: "Privacy Policy Page"
+        file: "site/content/privacy-policy/_index.md"
+        fields:
+          - {label: "System Class for layout", name: "pageclass", widget: "hidden", default: "page_privacy"}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string", default: "Amaiz Software"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Social Image", name: "socialImg", widget: "image"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown", required: false }
+
+
+  - name: "vacanies"
+    label: "Vacanies"
+    folder: "site/content/"
+    filter: {field: "vacancyPage", value: true }
+    create: true
+    fields:
+      - {label: "vacancyPage", name: "vacancyPage", widget: "hidden", default: true}
+      - {label: "layout", name: "layout", widget: "hidden", default: "vacancy"}
+      - {label: "System Class for layout", name: "pageclass", widget: "hidden", default: "page_vacancy"}
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        fields:
+          - {label: "Title", name: "title", widget: "string", default: "Amaiz Software"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Social Image", name: "socialImg", widget: "image"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Location", name: "location", widget: "select", options: ["St. Petersburg, Russia", "London, UK", "St. Petersburg, Russia / London, UK"]}
+      - {label: "Work Time", name: "workTime", widget: "select", options: ["Full Time", "Part Time"]}
+      - {label: "Button Text (by default: Apply to this position)", name: "btnText", widget: "string", default: "Apply to this position", required: false}
+      - {label: "Responsibilities", name: "responsibilities", widget: "markdown", required: true }
+      - {label: "Requirements", name: "requirements", widget: "markdown", required: true }
+

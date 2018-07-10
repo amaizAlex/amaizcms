@@ -1,0 +1,25 @@
+<div class="form-early-access-wrap">
+	<form action="/php/form-early.php" method="POST" class="form-early-access">
+		<span class="form-early-access-title">
+			Be the FIRST to know <span class="nowrap">when the app is available!</span>
+		</span>
+		<input type="hidden" name="from" value="homepage" />
+		<input type="hidden" name="form_number" value="{{ .formNumber }}" />
+		<input class="input-suspend" type="hidden" name="suspended" value="true">
+		<input class="email" id="email" type="text" name="email" placeholder="Enter your email">
+		<button class="btn-blue" type="submit">NOTIFY ME</button>
+		<div class="message notify">Enter email adress</div>
+		<div class="message error">Enter a valid email adress</div>
+		<div class="message success">Thank You for Registration!</div>
+		<div class="message noprivacy">Please accept the Privacy & Cookie Policy</div>
+		<input type="checkbox" id="form-early-access-privacy{{ .formNumber }}" class="form-early-access-privacy">
+		<label for="form-early-access-privacy{{ .formNumber }}" class="form-early-access-checkbox">
+			<span class="checksign"></span>
+			I understand that by submitting my personal information to Amaiz it is subject to the Amaiz <a href="https://amaiz.com/privacy-policy">Privacy & Cookie Policy</a>
+		</label>
+		<input type="checkbox" id="form-early-access-agree{{ .formNumber }}" class="form-early-access-agree">
+		<label for="form-early-access-agree{{ .formNumber }}" class="form-early-access-checkbox">
+			<span class="checksign"></span>I agree that Amaiz and its group of companies can contact me by email to promote their products and services
+		</label>
+	</form>
+</div>

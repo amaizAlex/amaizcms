@@ -1,0 +1,83 @@
+.page_privacy {
+	.fixed {
+		.fixed_bg1 {
+			.retina('/img/bg/privacy-policy.jpg', 2, cover, no-repeat center center @dark);
+			background-size: cover;
+		}
+	}
+
+	.intro-img {
+		.retina('/img/bg/privacy-policy.jpg', 2, cover, no-repeat center center @dark);
+		background-size: cover;
+	}
+
+	
+	.content {
+		.privacy-nav {
+			margin: 48px 0;
+
+			:before {
+				display: none;
+			}
+			li {
+				margin-left: 0;
+			}
+		}
+
+		a {
+			color: @azure;
+		}
+
+		h2 {
+			margin-bottom: 16px;
+
+			.anchor {
+				display: block;
+				position: relative;
+				visibility: hidden;
+				top: -70px;
+			}
+		}
+
+		h3 {
+			margin-bottom: 8px;
+		}
+
+		.table-icon {
+			width: 100%;
+			margin: 0 auto 16px;
+
+			path {
+				fill:@gray;
+			}
+		}
+
+		.table-view {
+			overflow-x: scroll;
+			margin-bottom: 24px;
+
+			table {
+				border-collapse: collapse;
+				border: 1px solid #ccc;
+				min-width: 500px;
+				width: 100%;
+
+				td {
+					padding: 8px;
+				}
+			}
+		}
+	}
+}
+
+
+
+@media (min-width: 548px) {
+	.page_privacy {
+		.content {
+			.table-icon {
+				display: none;
+			}
+		}
+	}
+}

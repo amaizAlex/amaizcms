@@ -1,0 +1,155 @@
+.page_about {
+
+	.intro-img {
+		.retina('/img/gallery/office1.jpg', 2, cover, no-repeat center center @dark);
+		background-size: cover;
+	}
+
+	.quote {
+		margin-bottom: 40px;
+	}
+
+	.img-office {
+		width: 100%;	
+		margin-bottom: 48px;
+	}
+
+	.content {
+		h2, h3 {
+			margin-bottom: 16px;
+		}
+	}
+
+	.leaders {
+		width: calc(100% ~"+" 48px);
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -24px;
+
+		.leader {
+			width: 50%;
+		
+			img {
+				display: block;
+				width: 100%;
+			}
+
+			.leader-name {
+				font-size: 12px;
+				padding: 8px 8px 0;
+				font-weight: bold;
+			}
+
+			span {
+				display: block;
+				font-size: 12px;
+				padding: 0 8px 24px;
+			}
+
+			&.hide {
+				display: none;
+			}
+		}
+
+		.btn_viewall {
+			width: 100%;
+			margin: 0 24px 32px;
+			background: @lightBlue;
+			text-align: center;
+			padding: 8px 0;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+	}
+
+	.aftercontent {
+		margin: 40px auto 48px;
+		text-align: center;
+
+		span {
+			display: block;
+			margin-bottom: 16px;
+		}
+	}
+}
+
+
+@media (min-width: 500px) {
+	.page_about {
+		.content {
+			.leaders {
+
+				.leader {
+					width: 33.3333%;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (min-height: 600px) {
+	.page_about {
+		.quote {
+			margin-bottom: 75px;
+		}
+
+		.content {
+
+			.leaders {
+				margin: 0;
+				width: 100%;
+				justify-content: space-between;
+
+				.leader {
+					width: 32.5%;
+				}
+
+				.btn_viewall {
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) and (min-height: 600px) {
+	.page_about {
+
+		.fixed {
+
+			.fixed_bg1 {
+				.retina('/img/gallery/office1.jpg', 2, cover, no-repeat 55% center @dark);
+				z-index: 10;
+			}
+			.fixed_bg2 {
+				.retina('/img/gallery/office2.jpg', 2, cover, no-repeat 70% center @dark);
+				z-index: 9;
+			}
+			.fixed_bg3 {
+				.retina('/img/gallery/office3.jpg', 2, cover, no-repeat 70% center @dark);
+				z-index: 8;
+			}
+			.fixed_bg4 {
+				.retina('/img/gallery/office4.jpg', 2, cover, no-repeat center center @dark);
+				z-index: 7;
+			}
+			.fixed_bg5 {
+				.retina('/img/gallery/office5.jpg', 2, cover, no-repeat 35% center @dark);
+				z-index: 6;
+			}
+		}
+
+		.img-office {
+			display: none;
+		}
+
+		.quote {
+			margin-bottom: 70px;
+		}
+
+		.content {
+			padding-bottom: 16px;
+		}
+	}
+}

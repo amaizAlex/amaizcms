@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="{{ $.Site.Language.Lang }}" class="{{ .Params.pageclass }}">
+
+  {{ partial "head" . }}
+
+  <body id="transition-disabled">
+
+    {{ block "header" . }}{{ partial "header" . }}{{end}}
+
+    {{ block "main" . }}{{end}}
+
+    {{ block "footer" . }}{{ partial "footer" . }}{{end}}
+    
+
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+
+  </body>
+</html>

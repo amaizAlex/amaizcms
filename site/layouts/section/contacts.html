@@ -1,0 +1,161 @@
+{{ define "main" }}
+
+
+		<div class="map"></div>
+		<div class="container">
+			<ul class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/" itemprop="item">Home</a>
+				<meta itemprop="position" content="1">
+			</li><span class="breadcrumbs_separator"></span>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span itemprop="item">Contacts</span>
+				<meta itemprop="position" content="2">
+			</li>
+			</ul>
+			<div class="content">
+			<h1>Contacts</h1>
+			<h2>London Office</h2>
+			<p>
+				2 Leman St<br/>
+				WeWork Aldgate Tower<br/>
+				London E1 8FA<br/>
+				Phone number: <a href="tel:+44 2039 500 461">+44 2039 500 461</a><br/>
+				Email: <a class="emaillink" href="mailto:team@amaiz.com">team@amaiz.com</a>
+				
+				
+			</p>
+			</div>
+			<div class="form-simple_wrap">
+			<form class="form-simple" action="/php/form-early.php" method="POST" netlify netlify-honeypot="bot-field">
+				<input type="text" name="bot-field" style="display:none">
+				<span class="form-simple_title">Subscribe for updates</span>
+				<input type="hidden" name="formtype" value="form-simple">
+				<input type="hidden" name="id" value="" class="uniqid">
+				<input type="hidden" name="email_template" value="subscribers">
+				<input type="hidden" name="from" value="Amaiz - Contacts Page">
+				<input type="hidden" name="form_number" value="1">
+				<input class="form-simple_input-suspend" type="hidden" name="suspended" value="true">
+				<input class="form-simple_input-email" id="email" type="text" name="email" placeholder="Enter your email">
+				<button class="form-simple_btn-submit btn-blue" type="submit">SUBSCRIBE</button>
+				<input class="form-simple_input-checkbox form-simple_input-privacy" type="checkbox" id="1">
+				<label class="form-simple_label-checkbox form-simple_label-privacy" for="1"><span class="form-simple_label-checkbox_checksign"></span>I understand that by submitting my personal information to Amaiz it is subject to the Amaiz <a href="https://amaiz.com/privacy-policy">Privacy & Cookie Policy</a></label>
+				<input class="form-simple_input-checkbox" type="checkbox" id="2">
+				<label class="form-simple_label-checkbox form-simple_label-agree" for="2"><span class="form-simple_label-checkbox_checksign"></span>I agree that Amaiz and its group of companies can contact me by email to promote their products and services</label>
+			</form>
+			</div>
+		</div>
+		<div itemscope itemtype="https://schema.org/Organization" style="display:none;">
+			<meta itemprop="name" content="Amaiz Ltd">
+			<link itemprop="url" href="https://amaiz.com">
+			<link itemprop="logo" href="https://amaiz.com/img/other/amaiz-logotype.png">
+			<meta itemprop="description" content="Amaiz provides simple, smart and secure mobile banking experience. Free mobile-based payment account and Mastercard prepaid debit card.">
+			<meta itemprop="email" content="hello@amaiz.com">
+			<div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+			<meta itemprop="addressLocality" content="United Kingdom, England">
+			<meta itemprop="postalCode" content="E18FA">
+			<meta itemprop="streetAddress" content="2 Leman street">
+			</div>
+			<meta itemprop="telephone" content="+442039500461">
+			<link itemprop="sameAs" href="https://facebook.com/AmaizFinance">
+			<link itemprop="sameAs" href="https://vk.com/amaizteam">
+			<link itemprop="sameAs" href="https://twitter.com/AmaizFinance">
+			<link itemprop="sameAs" href="https://www.instagram.com/amaiz_finance">
+			<meta itemprop="founder" content="Sergey Dobrovolskiy">
+			<meta itemprop="foundingDate" content="01/02/2017">
+			<meta itemprop="brand" content="Amaiz">
+		</div>
+		<script type="text/javascript">
+			function initMap() {
+			var office = {lat: 51.514880, lng: -0.072105};
+			var map = new google.maps.Map(document.querySelector('.map'), {
+				zoom: 14,
+				center: office,
+				styles: [
+						{
+							"featureType": "administrative",
+							"elementType": "labels.text.fill",
+							"stylers": [
+								{
+									"color": "#777777"
+								}
+							]
+						},
+						{
+							"featureType": "landscape",
+							"elementType": "all",
+							"stylers": [
+								{
+									"color": "#f2f2f2"
+								}
+							]
+						},
+						{
+							"featureType": "poi",
+							"elementType": "all",
+							"stylers": [
+								{
+									"visibility": "off"
+								}
+							]
+						},
+						{
+							"featureType": "road",
+							"elementType": "all",
+							"stylers": [
+								{
+									"saturation": -100
+								},
+								{
+									"lightness": 45
+								}
+							]
+						},
+						{
+							"featureType": "road.highway",
+							"elementType": "all",
+							"stylers": [
+								{
+									"visibility": "simplified"
+								}
+							]
+						},
+						{
+							"featureType": "road.arterial",
+							"elementType": "labels.icon",
+							"stylers": [
+								{
+									"visibility": "off"
+								}
+							]
+						},
+						{
+							"featureType": "transit",
+							"elementType": "all",
+							"stylers": [
+								{
+									"visibility": "off"
+								}
+							]
+						},
+						{
+							"featureType": "water",
+							"elementType": "all",
+							"stylers": [
+								{
+									"color": "#e5e5e5"
+								},
+								{
+									"visibility": "on"
+								}
+							]
+						}
+					]
+			});
+			var marker = new google.maps.Marker({
+				position: office,
+				map: map,
+				icon: '/img/icons/icon-marker.svg' 
+			});
+			}
+		</script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmPIkeQ-OsHTaLE-h5zunBjRBPXT9zhC0&amp;callback=initMap&amp;language=en&amp;region=gb"></script>
+{{end}}

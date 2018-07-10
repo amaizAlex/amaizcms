@@ -1,0 +1,64 @@
+.quote {
+	display: flex;
+
+	&_avatar {
+		width: 80px;
+		height: 80px;
+		margin-right: 12px;
+		border-radius: 3px;
+		flex-shrink: 0;
+	}
+
+	&_content {
+		width: 100%;
+		max-width: 568px;
+
+		&_text {
+			font-family: @Geomanist;
+			font-weight: 800;
+			font-size: 12px;
+			padding-bottom: 8px;
+
+			&:before {
+				content: "\00ab";
+			}
+			&:after {
+				content: "\00bb";
+			}
+		}
+
+		&_name {
+			text-align: right;
+			font-size: 10px;
+		}
+
+		&_position {
+			text-align: right;
+			font-size: 10px;
+		}
+	}
+}
+
+
+@media (min-width: 768px) and (min-height: 600px) {
+	.quote {
+		&_avatar {
+			width: 120px;
+			height: 120px;
+			margin-right: 18px;
+		}
+
+		&_content {
+			&_text {
+				font-size: 16px;
+				padding: 16px 0;
+			}
+			&_name {
+				font-size: 12px;
+			}
+			&_position {
+				font-size: 12px;
+			}
+		}
+	}
+}

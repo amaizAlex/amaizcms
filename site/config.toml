@@ -1,0 +1,34 @@
+languageCode = "en-us"
+title = "Amaiz Software"
+
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[menu]
+
+  [[menu.main]]
+    identifier = ""
+    name = "Home"
+    title = "Homepage Title"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About Amaiz"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "contacts"
+    name = "Contacts"
+    title = "Amaiz Careers"
+    url = "/contacts/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "careers"
+    name = "Careers"
+    title = "Find best job"
+    url = "/careers/"
+    weight = 4

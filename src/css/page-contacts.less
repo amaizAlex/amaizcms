@@ -1,0 +1,74 @@
+.page_contacts {
+	
+
+	.map {
+		height: 270px;
+
+		.gm-style-mtc {
+			top: 50px;
+		}
+
+		button {
+			top: 57px!important;
+		}
+		
+		.gmnoprint button {
+			top: 0!important;
+		}
+	}
+	
+	
+	.container {
+
+		.content {
+			margin-bottom: 52px;
+
+			h2 {
+				margin-bottom: 16px;
+			}
+
+			a.emaillink {
+				color: @azure;
+				text-decoration: none;
+			}
+
+			a[href^="tel"] {
+				color: @azure;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+@media (min-height: 800px) {
+	.page_contacts {
+		.map {
+			height: 400px;
+		}
+	}
+}
+
+
+@media (min-width: 1024px) and (min-height: 600px) {
+
+	.page_contacts {
+		.map {
+			position: fixed!important;
+			width: 35%;
+			height: 100%;
+			left:0;
+			top:0;
+			background: @dark;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+
+			.content {
+				flex: 1;
+			}
+		}
+	}
+}

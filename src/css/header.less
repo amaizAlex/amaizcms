@@ -1,0 +1,228 @@
+.header {
+	position: fixed;
+	width: 100%;
+	top:0;
+	left:0;
+	z-index: 10;
+	padding: 14px 24px;
+	display: flex;
+	align-items: center;
+
+	background: @white;
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.15);
+
+	.logo {
+		display: block;
+		z-index: 1;
+		height: 18px;
+	}
+
+	.btn-nav {
+		position: absolute;
+		width: 38px;
+		height: 34px;
+		right: 16px;
+		top:6px;
+		cursor: pointer;
+		z-index: 3;
+
+		.btn-nav-box {
+			width: 22px;
+			height: 16px;
+			top:0; bottom:0;
+			left:0; right:0;
+			margin: auto;
+			position: absolute;
+		}
+
+		.btn-nav-inner,
+		.btn-nav-inner::before,
+		.btn-nav-inner::after {
+			width: 22px;
+			height: 3px;
+			background-color: @dark;
+			border-radius: 2px;
+			position: absolute;
+			transition: transform 0.15s 0s ease, background .1s;
+		}
+
+		.btn-nav-inner {
+			top:14px;
+		}
+
+		.btn-nav-inner::before,
+		.btn-nav-inner::after {
+			content: "";
+			display: block;
+		}
+		.btn-nav-inner::before {
+			top: -7px;
+			transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19), background .2s .2s;
+		}
+		.btn-nav-inner::after {
+		    top: -14px;
+			transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear, background .2s .2s;
+		}
+	}
+
+
+	nav.nav {
+		
+		ul {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left:0;
+			top:0;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: column;
+			padding: 5% 24px;
+			background: linear-gradient(to bottom, #6bd3ff 0%, @azure 50%, @azure 100%) no-repeat;
+			transform: translateX(100%);
+			transition: transform .3s;
+			z-index: 2;
+
+			li {
+				list-style: none;
+
+				a {
+					text-decoration: none;
+					font-size: 35px;
+					color: @white;
+					font-family: @Geomanist;
+					font-weight: 800;
+					display: block;
+					
+					transition: text-shadow .3s, transform .3s;
+					position: relative;
+
+					&:hover {
+						text-shadow: 0 0 20px rgba(255,255,255,1);
+						transform: scale(1.2);
+					}
+				}
+			}
+		}
+	}
+}
+
+html.nav-open {
+	height: 100%;
+	overflow: hidden;
+
+	body {
+		height: 100%;
+		overflow: hidden;
+	}
+
+	nav.nav ul{
+		transform: translateX(0);
+	}
+
+	.header {
+		.btn-nav {
+			position: fixed;
+			top: 8px;
+			right: 16px;
+
+			.btn-nav-inner {
+				background: @white;
+				transform: translate3d(0, -7px, 0) rotate(-45deg);
+				transition: transform 0.15s .22s cubic-bezier(0.215, 0.61, 0.355, 1);
+			}
+
+			.btn-nav-inner::after {
+				background: @white;
+				top: 0;
+				opacity: 0;
+				transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+			}
+
+			.btn-nav-inner::before {
+				background: @white;
+				top: 0;
+				transform: rotate(-90deg);
+				transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+			}
+		}
+	}
+
+	&.cookie-open {
+		.header {
+			.btn-nav {
+				top:78px;
+			}
+		}
+	}
+}
+
+
+@media (min-height: 600px) and (min-width: 1024px), (orientation:landscape) and (min-width: 768px) and (min-height: 599px) {
+
+	.header {
+		padding: 18px 32px 18px;
+		box-shadow: 0 4px 15px 0 rgba(0,0,0,.15)!important;
+	
+		.btn-nav {
+			display: none;
+		}
+
+		nav.nav {
+			left: 35%;
+			position: absolute;
+			width: 65%;
+			padding-left: 52px;
+			
+			ul {
+				display: flex;
+				position: relative;
+				background: transparent;
+				padding: 0;
+				transform: none;
+				flex-direction: row;
+				transition: none;
+				justify-content: flex-start;
+
+				li{
+					a {
+						font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+						font-size: 16px;
+						font-weight: normal;
+						color: @dark;
+						margin-right: 40px;
+						display: inline-block;
+						transform: none;
+						transition: color .2s;
+
+						&:hover {
+							transform: none;
+							border-bottom: 1px solid @dark;
+						}
+
+						&.active {
+							border-bottom: 1px solid @dark;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+@media (orientation: landscape){
+	.header {
+		box-shadow: 0 0 5px 0 rgba(0,0,0,.15);
+	}
+}
+
+@media (min-width: 1280px) and (min-height:800px) {
+	.header {
+		nav.nav {
+			padding-left: 160px;
+		}
+	}
+}

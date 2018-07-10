@@ -1,0 +1,56 @@
+.page_vacancy {
+
+	.fixed {
+		.fixed_bg1 {
+			.retina('/img/bg/vacancy.jpg', 2, cover, no-repeat center center @dark);
+			background-size: cover;
+		}
+	}
+
+	.intro-img {
+		.retina('/img/bg/vacancy.jpg', 2, cover, no-repeat center center @dark);
+		background-size: cover;
+	}
+	
+	.content {
+		h1 {
+			margin-bottom: 8px;
+		}
+
+		h2 {
+			margin-bottom: 8px;
+		}
+
+		.vacancy_time {
+			display: block;
+			margin-bottom: 24px;
+		}
+
+		.btn-apply {
+			margin-bottom: 40px;
+			max-width: 320px;
+		}
+	}
+}
+
+@media (min-width:568px) {
+	.page_vacancy {
+		.content {
+			.vacancy_time {
+				margin-bottom: 40px;
+			}
+
+			.btn-apply {
+				margin-bottom: 52px;
+			}
+
+			h2 {
+				margin-bottom: 16px;
+			}
+
+			ul {
+				padding-left: 22px; 
+			}
+		}
+	}
+}

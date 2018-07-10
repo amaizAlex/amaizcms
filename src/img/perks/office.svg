@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="90px" viewBox="0 0 86 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>bank copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="second-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-716.000000, -111.000000)" stroke="#2C3846" stroke-width="2">
+            <g id="bank-copy" transform="translate(717.000000, 112.000000)">
+                <rect id="Rectangle-path" x="0" y="78.6632" width="83.51875" height="9.3368"></rect>
+                <rect id="Rectangle-path" x="4.6375" y="71.3328" width="74.24375" height="7.3304"></rect>
+                <rect id="Rectangle-path" x="4.6375" y="37.9984" width="74.24375" height="7.3304"></rect>
+                <path d="M40.43375,11.3344 L43.05875,11.3344 C57.7011994,11.3344 69.57125,23.2722794 69.57125,37.9984 L13.92125,37.9984 C13.92125,23.2722794 25.7913006,11.3344 40.43375,11.3344 Z" id="Shape"></path>
+                <path d="M41,10.6656 L41,0" id="Shape" stroke-linecap="round"></path>
+                <path d="M8,44.7832 L8,71.1832" id="Shape"></path>
+                <path d="M22,44.7832 L22,71.1832" id="Shape"></path>
+                <path d="M35,44.7832 L35,71.1832" id="Shape"></path>
+                <path d="M48,44.7832 L48,71.1832" id="Shape"></path>
+                <path d="M61,44.7832 L61,71.1832" id="Shape"></path>
+                <path d="M74,44.7832 L74,71.1832" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

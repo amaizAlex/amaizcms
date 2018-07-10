@@ -1,0 +1,264 @@
+.form-apply {
+	background: @dark;
+	color: @white;
+
+	&_form {
+		max-width: 568px;
+		margin: 0 auto;
+		padding: 28px 24px 48px;
+
+		&_title {
+			display: inline-block;
+			font-family: @Geomanist;
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 16px;
+			flex: 100%;
+		}
+
+		&_description {
+			margin-bottom: 24px;
+			font-size: 12px;
+			line-height: 20px;
+		}
+
+		&_name,
+		&_email,
+		&_text {
+			width: 100%;
+			background: @lightBlue;
+			padding: 12px 16px;
+			border-radius: 4px;
+			margin-bottom: 8px;
+			color: @dark;
+
+			&::placeholder {
+				color: @gray
+			}
+		}
+
+		&_name,
+		&_email {
+			border: 3px solid transparent;
+
+			&.error {
+				border: 3px solid @red;
+				color: @red;
+			}
+		}
+	
+		&_text {
+			resize: vertical;
+			margin-bottom: 16px;
+		}
+
+		&_files {
+
+			&_input {
+				display: none;
+			}
+
+			&_label {
+				
+				&_btn {
+					text-decoration: underline;
+					margin-left: 6px;
+				}
+
+				&_note {
+					display: block;
+					margin: 8px 0 0 24px;
+					font-size: 12px;
+					color: @gray;
+					margin-bottom: 16px;
+
+					&_limit {
+						&.error {
+							color: @red;
+						}
+					}
+				}
+			}
+
+			&_attached {
+				position: relative;
+				
+				&_attach {
+					position: relative;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					font-size: 12px;
+					line-height: 26px;
+					padding: 0 36px 0 24px;
+					margin-bottom: 16px;
+					background: url('/img/icons/icon-file.svg') no-repeat left center;
+					background-size: 18px 18px;
+
+					.remove {
+						position: absolute;
+						right: 0;
+						top:0; bottom:0;
+						margin: auto;
+						width: 16px;
+						height: 16px;
+						background: url('/img/icons/icon-cross.svg') no-repeat center center; 
+						background-size: 100% 100%;
+					}
+				}
+			}
+		}
+
+		&_btn {
+			width: 100%;
+			max-width: 254px;
+			margin-bottom: 12px;
+		}
+
+		#form-apply_form_privacy:checked + &_privacy_label {
+
+			.form-apply_form_privacy_label_checksign {
+				border: 1px solid @azure;
+
+				&:before {
+					display: block;
+				}
+			}
+		}
+
+		&_privacy_label {
+			width: 100%;
+			font-size: 10px;
+			padding-left: 24px;
+			display: block;
+			position: relative;
+			margin-top: 12px;
+			color: @white;
+			cursor: pointer;
+			font-size: 12px;
+
+			a {
+				color: @azure;
+			}
+
+			&.error {
+				.form-apply_form_privacy_label_checksign {
+					border: 1px solid @red;
+				}
+			}
+
+			&_checksign {
+				width: 16px;
+				height: 16px;
+				border-radius: 4px;
+				border: 1px solid @gray;
+				display: block;
+				position: absolute;
+				left:0;
+				top:-1px;
+
+				&:before {
+					content: '';
+					position: absolute;
+					width: 10px;
+					height: 5px;
+					border-left: 2px solid @azure;
+					border-bottom: 2px solid @azure;
+					transform: rotate(-45deg);
+					top: 1px;
+					left: 3px;
+					display: none;
+				}
+			}
+		}
+	}
+
+	#form-apply_form_privacy,
+	#form-apply_form_btn_submit {
+		display: none;
+	}
+}
+
+@media (min-width: 568px) {
+	.form-apply {
+
+		&_form {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			&_name {
+				flex: 1;
+				width: calc(50% ~"-" 6px);
+				margin-bottom: 12px;
+				margin-right: 6px;
+			}
+
+			&_email {
+				flex: 1;
+				width: calc(50% ~"-" 6px);
+				margin-bottom: 12px;
+				margin-left: 6px;
+			}
+
+			&_files {
+				display: flex;
+				width: 100%;
+
+				&_label {
+					flex: 1;
+					width: calc(50% ~"-" 6px);
+					margin-bottom: 12px;
+					margin-right: 6px;
+				}
+
+				&_attached {
+					flex: 1;
+					width: calc(50% ~"-" 6px);
+					margin-bottom: 12px;
+					margin-left: 6px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.form-apply {
+		&_form {
+			&_title {
+				font-size: 28px;
+			}
+
+			&_description {
+				font-size: 16px;
+			}
+			&_text {
+				margin-bottom: 24px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) and (min-height: 600px) {
+	.form-apply {
+		margin-left: 35%;
+		width: 65%;
+
+		&_form {
+			padding: 48px 52px 52px;
+			max-width: none;
+		}
+	}
+}
+
+
+@media (min-width: 1280px) and (min-height: 800px) {
+	.form-apply {
+
+		&_form {
+			padding: 48px 160px 80px;
+			max-width: none;
+		}
+	}
+}

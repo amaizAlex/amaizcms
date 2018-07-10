@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="87px" height="77px" viewBox="0 0 87 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>bage copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="second-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-112.000000, -541.000000)" stroke="#2C3846" stroke-width="2">
+            <g id="bage-copy" transform="translate(113.000000, 542.000000)">
+                <path d="M35,17.826087 L35,5.34782609 C35,2.3993913 37.39588,0 40.34,0 C43.28412,0 45.68,2.3993913 45.68,5.34782609 L45.68,17.826087" id="Path"></path>
+                <polygon id="Path" points="84.44 74.1502729 0 74.1502729 0 19 84.44 19"></polygon>
+                <path d="M50.5,32.5 L69.6049732,32.5" id="Line-5" stroke-linecap="round"></path>
+                <path d="M50.5,46.5 L69.6049732,46.5" id="Line-5-Copy-2" stroke-linecap="round"></path>
+                <path d="M11,61 C11,52.7157288 17.7157288,46 26,46 C34.2842712,46 41,52.7157288 41,61" id="Combined-Shape" stroke-linecap="round"></path>
+                <circle id="Oval-2" cx="26.5" cy="38.5" r="7.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,128 @@
+{{ define "main" }}
+
+	<div class="fixed_white-bg"></div>
+	<div class="fixed">
+		<div class="fixed_bg fixed_bg1"><img class="fixed_screen1" src="/img/screens/intro.png" alt="Free mobile banking"></div>
+		<div class="fixed_bg fixed_bg2"><img class="fixed_screen2" src="/img/screens/payment-account.png" alt="Mobile based payment account"></div>
+		<div class="fixed_bg fixed_bg3"><img class="fixed_screen3" src="/img/screens/analytics.png" alt="Mobile banking analytics"></div>
+		<div class="fixed_bg fixed_bg4"><img class="fixed_screen4" src="/img/screens/money-secure.png" alt="Mobile banking security"></div>
+		<div class="fixed_bg fixed_bg5"><img class="fixed_screen5" src="/img/screens/support.png" alt="Mobile banking customer care"></div>
+		<div class="fixed_bg fixed_bg6"><img class="fixed_screen6" src="/img/screens/outro.png" alt="Free mobile banking"></div>
+	</div>
+	<div class="dots">
+		<div class="dots_dot toSection1 active"></div>
+		<div class="dots_dot toSection2"></div>
+		<div class="dots_dot toSection3"></div>
+		<div class="dots_dot toSection4"></div>
+		<div class="dots_dot toSection5"></div>
+	</div>
+	<div class="section section1">
+		<div class="mobile-home">
+			<div class="screen-wrap"><img src="/img/screens/payment-account.png" alt="Mobile based payment account"></div>
+		</div>
+		<div class="content">
+			<h1><span class="azure">{{ .Params.section1.h1}}</h1>
+			<div class="scroll-to-form">
+				<div class="scroll-to-form_btn"><span class="h3">Be the FIRST to know <span>when the app is available!</span></span>
+				<div class="btn-blue">NOTIFY ME</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section section2">
+		<div class="mobile-home">
+			<h2>Mobile-Based Payment Account</h2>
+			<div class="screen-wrap"><img src="/img/screens/payment-account.png" alt="Mobile based payment account"></div>
+		</div>
+		<div class="content">
+			<h2>Mobile-Based<br/>Payment Account</h2>
+			<h3>FREE Forever. Save & Earn</h3>
+			<p>The free Amaiz mobile banking app is built for people – with no tricks, gimmicks or hidden fees.</p>
+			<ul class="custom-dot"> 
+				<li>Open a mobile-based payment account in just five minutes and use it instantly – <b>with no servicing fees and no expiration date</b></li>
+				<li>Get a free Mastercard® prepaid debit card for your account – with free delivery</li>
+				<li>Transfer money instantly by account, card, phone number and more!</li>
+			</ul>
+		</div>
+	</div>
+	<div class="section section3">
+		<div class="mobile-home">
+			<h2>Smart Analytics</h2>
+			<div class="screen-wrap">
+				<img src="/img/screens/analytics.png" alt="Mobile banking analytics">
+			</div>
+		</div>
+		<div class="content">
+			<h2>Smart Analytics</h2>
+			<h3>Manage Your Money <span class="nowrap">Like Never Before</span></h3>
+			<p>Always stay on top of your money – wherever you are and whenever you want!</p>
+			<ul class="custom-dot">
+				<li>All-in-one: See all of your funds in one place – add your accounts from other banks and make payments quickly and securely</li>
+				<li>Categorise your payments with smart tags and create detailed spending reports</li>
+				<li>Search for payments within the app in seconds, so that you know when and where you used your card, and more!</li>
+			</ul>
+		</div>
+	</div>
+	<div class="section section4">
+		<div class="mobile-home">
+			<h2>State of the Art<br>Funds Protection</h2>
+			<div class="screen-wrap">
+				<img src="/img/screens/money-secure.png" alt="Mobile banking security">
+			</div>
+		</div>
+		<div class="content">
+			<h2>State of the Art<br>Funds Protection</h2>
+			<h3>Keep Your Money Secure 24x7</h3>
+			<p>Amaiz gives you full control over your account and comes with automatic protection against fraud – all to help you keep your money safe.</p>
+			<ul class="custom-dot"> 
+				<li>Log in with fingerprint authentication</li>
+				<li>Get instant notifications of every transaction</li>
+				<li>Manage your PIN and block cards instantly</li>
+				<li>Update card limits in 1 tap, and more!</li>
+			</ul>
+		</div>
+	</div>
+	<div class="section section5">
+		<div class="mobile-home">
+			<h2>Excellent Customer Care 24x7</h2>
+			<div class="screen-wrap">
+				<img src="/img/screens/support.png" alt="Mobile banking customer care">
+			</div>
+		</div>
+		<div class="content">
+			<h2>Excellent<br/>Customer Care 24x7</h2>
+			<h3>We Put Our Clients First</h3>
+			<p>Amaiz offers impeccable customer service and technical support that is truly personal and recognises your needs. We always want you to feel understood and satisfied with our app and services.</p>
+			<p>Have a question? Round the clock Amaiz Support will help you find answers through our in-app chat, email and Twitter.</p>
+			<div class="quote">
+				<img class="quote_avatar" src="/img/leaders/sergey-dobrovolskiy.jpg" alt="Sergey Dobrovolskiy" />
+				<div class="quote_content">
+					<div class="quote_content_text">One of our mottos is: treat our customers the way you would want to be treated</div>
+					<div class="quote_content_name">Sergey Dobrovolskiy</div>
+					<div class="quote_content_position">Founder &amp; CEO Amaiz Group</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form-simple_wrap">
+		<form class="form-simple" netlify method="POST" name="form-simple" netlify-honeypot="bot-field">
+			<input type="text" name="bot-field" style="display:none">
+			<span class="form-simple_title">Be the FIRST to know <br/>when the app is available!</span>
+			<input type="hidden" name="formtype" value="form-simple">
+			<input type="hidden" name="id" value="" class="uniqid">
+			<input type="hidden" name="email_template" value="btfk">
+			<input type="hidden" name="from" value="Amaiz - Home Page">
+			<input type="hidden" name="form_number" value="1">
+			<input class="form-simple_input-suspend" type="hidden" name="suspended" value="true">
+			<input class="form-simple_input-email" id="email" type="text" name="email" placeholder="Enter your email">
+			<button class="form-simple_btn-submit btn-blue" type="submit">NOTIFY ME</button>
+			<input class="form-simple_input-checkbox form-simple_input-privacy" type="checkbox" id="1">
+			<label class="form-simple_label-checkbox form-simple_label-privacy" for="1"><span class="form-simple_label-checkbox_checksign"></span>I understand that by submitting my personal information to Amaiz it is subject to the Amaiz <a href="https://amaiz.com/privacy-policy">Privacy & Cookie Policy</a></label>
+			<input class="form-simple_input-checkbox" type="checkbox" id="2">
+			<label class="form-simple_label-checkbox form-simple_label-agree" for="2"><span class="form-simple_label-checkbox_checksign"></span>I agree that Amaiz and its group of companies can contact me by email to promote their products and services</label>
+		</form>
+	</div>
+
+	{{ partial "microdata" . }}
+
+{{end}}

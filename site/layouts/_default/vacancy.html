@@ -1,0 +1,139 @@
+{{ define "main" }}
+	<div class="fixed">
+		<div class="fixed_bg fixed_bg1"></div>
+	</div>
+	<div class="intro-img"></div>
+	<ul class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/" itemprop="item">Home</a>
+			<meta itemprop="position" content="1">
+		</li>
+		<span class="breadcrumbs_separator"></span>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="/careers/" itemprop="item">Careers</a>
+			<meta itemprop="position" content="2">
+		</li>
+		<span class="breadcrumbs_separator"></span>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<span itemprop="item">{{ .Title }}</span>
+			<meta itemprop="position" content="3">
+		</li>
+	</ul>
+	<div class="content">
+		<h1 itemprop="title">{{ .Title }}</h1>
+		<span class="vacancy_city" itemprop="jobLocation" itemscope itemtype="http://schema.org/Place">
+			{{ if eq .Params.location "St. Petersburg, Russia" }}
+				<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<span class="h3" itemprop="addressLocality">St. Petersburg, </span>
+					<span class="h3" itemprop="addressRegion">Russia</span>
+				</span>
+			{{ end }}
+
+			{{ if eq .Params.location "London, UK" }}
+				<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<span class="h3" itemprop="addressLocality">London, </span>
+					<span class="h3" itemprop="addressRegion">UK</span>
+				</span>
+			{{ end }}
+
+			{{ if eq .Params.location "St. Petersburg, Russia / London, UK" }}
+				<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<span class="h3" itemprop="addressLocality">St. Petersburg, </span>
+					<span class="h3" itemprop="addressRegion">Russia / </span>
+				</span>
+				<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<span class="h3" itemprop="addressLocality">London, </span>
+					<span class="h3" itemprop="addressRegion">UK</span>
+				</span>
+			{{ end }}
+
+		</span>
+		<span class="h3 vacancy_time" itemprop="employmentType">{{ .Params.workTime }}</span>
+
+		<div class="btn-blue btn-apply">{{ .Params.btnText }}</div>
+
+		<h2>Responsibilities</h2>
+		<ul itemprop="responsibilities">
+			{{ .Params.responsibilities | safeHTML }}
+		</ul>
+		<h2>Requirements</h2>
+		<ul itemprop="experienceRequirements">
+			{{ .Params.requirements | safeHTML }}
+		</ul>
+		<div class="perks">
+		<h2 class="perks_title">The best perks & <span class="nowrap">benefits in fintech</span></h2>
+		<p class="perks_description">We want our team to feel how much we care about their happiness, comfort and self-fulfillment. That is why we have created a complete package of perks and benefits possible.</p>
+		<div class="perk_wrap">
+			<div class="perk">
+				<div class="perk_img icon-toppay"></div>
+				<div class="perk_title" itemprop="incentiveCompensation">Top pay</div>
+			</div>
+			<div class="perk">
+				<div class="perk_img icon-medical"></div>
+				<div class="perk_title" itemprop="incentiveCompensation">Full medical coverage</div>
+			</div>
+			<div class="perk">
+				<div class="perk_img icon-hours"></div>
+				<div class="perk_title" itemprop="incentiveCompensation">Flexible hours</div>
+			</div>
+			<div class="perk">
+				<div class="perk_img icon-lunches"></div>
+				<div class="perk_title" itemprop="incentiveCompensation">Free lunches & snacks</div>
+			</div>
+			<div class="perk">
+				<div class="perk_img icon-events"></div>
+				<div class="perk_title" itemprop="incentiveCompensation">Regular events</div>
+			</div>
+			<div class="perk">
+				<div class="perk_img icon-office"></div>
+				<div class="perk_title" itemprop="incentiveCompensation">Office in the historical part of the city</div>
+			</div>
+			<div class="perk">
+				<div class="perk_img icon-playstation"></div>
+				<div class="perk_title" itemprop="incentiveCompensation">Playstation point</div>
+			</div>
+			<div class="perk">
+				<div class="perk_img icon-tickets"></div>
+				<div class="perk_title" itemprop="incentiveCompensation">Conference tickets</div>
+			</div>
+			<div class="perk">
+				<div class="perk_img icon-english"></div>
+				<div class="perk_title" itemprop="incentiveCompensation">English lessons</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="form-apply">
+		<form class="form-apply_form" name="form-application" method="post" enctype="multipart/form-data" netlify netlify-honeypot="bot-field">
+		<input type="text" name="bot-field" style="display:none">
+		<input type="hidden" name="formtype" value="form-apply">
+		<div class="form-apply_form_title">{{ .Title }}</div>
+		<div class="form-apply_form_description"></div>
+		<input type="hidden" value="{{ .Title }}" name="vacancy">
+		<input class="form-apply_form_name" type="text" name="name" placeholder="Name">
+		<input class="form-apply_form_email" type="email" name="email" placeholder="Email address">
+		<textarea class="form-apply_form_text" name="message" cols="30" rows="10" placeholder="Here you can tell about yourself. Include everything that you think is important, add links to relevant resources that might help your introduction."></textarea>
+		<div class="form-apply_form_files">
+			<input class="form-apply_form_files_input" id="1" type="file" name="file_attach1" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/x-iwork-pages-sffpages,application/msword,application/pdf">
+			<input class="form-apply_form_files_input" id="2" type="file" name="file_attach2" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/x-iwork-pages-sffpages,application/msword,application/pdf">
+			<input class="form-apply_form_files_input" id="3" type="file" name="file_attach3" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/x-iwork-pages-sffpages,application/msword,application/pdf">
+			<label class="form-apply_form_files_label" for="1">
+			<svg class="form-apply_form_files_label_icon" xmlns="https://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 33 30">
+				<g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round">
+				<path d="M8.906 16.977a2.841 2.841 0 0 0 0 4.16c1.21 1.15 3.169 1.15 4.377 0L25 10"></path>
+				<path d="M18.07 3.914L2.81 18.74a5.892 5.892 0 0 0 .001 8.5c2.415 2.345 6.331 2.345 8.745 0L30.642 8.694a4.419 4.419 0 0 0 0-6.374c-1.812-1.76-4.75-1.76-6.56 0L8.55 17.413"></path>
+				</g>
+			</svg><span class="form-apply_form_files_label_btn">Browse & attach files</span><span class="form-apply_form_files_label_note">3 files only. <span class="form-apply_form_files_label_note_limit">Maximum files size: 25mb</span><br>Supported .pdf .doc .pages</span>
+			</label>
+			<div class="form-apply_form_files_attached"></div>
+		</div>
+		<button class="form-apply_form_btn btn-blue" type="submit">Send application</button>
+		<input type="checkbox" id="form-apply_form_privacy">
+		<label class="form-apply_form_privacy_label" for="form-apply_form_privacy"><span class="form-apply_form_privacy_label_checksign"></span>I understand that by submitting my personal information to Amaiz it is subject to the Amaiz <a href="https://amaiz.com/privacy-policy">Privacy & Cookie Policy</a></label>
+		</form>
+	</div>
+	<meta itemprop="specialCommitments" content="Amaiz Software">
+	<meta itemprop="hiringOrganization" content="Amaiz Software">
+	<meta itemprop="datePosted" content="2018-05-24">
+	<meta itemprop="description" content="Join Amaiz development lab and business team to get the most complete package of perks and benefits possible. Build your career with Amaiz!">
+{{end}}
